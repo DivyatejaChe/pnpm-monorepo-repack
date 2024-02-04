@@ -4,12 +4,18 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:all": "concurrently -P 'pnpm -w run start:ncbApp' 'pnpm -w run start:auth' 'pnpm -w run start:transactions'",
     "start:ncbApp": "pnpm --filter ncbApp start",
+    "start:auth": "pnpm --filter ./packages/modules/auth start",
+    "start:transactions": "pnpm --filter ./packages/modules/transactions start",
     "run:android:ncbApp": "pnpm --filter ncbApp run android",
     "run:ios:ncbApp": "pnpm --filter ncbApp run ios",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

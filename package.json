@@ -10,6 +10,7 @@
     "start:transactions": "pnpm --filter ./packages/modules/transactions start",
     "run:android:ncbApp": "pnpm --filter ncbApp run android",
     "run:ios:ncbApp": "pnpm --filter ncbApp run ios",
+    "adbreverse": "adb reverse tcp:3000 tcp:3000 && adb reverse tcp:8081 tcp:8081 && adb reverse tcp:9000 tcp:9000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:9002 tcp:9002 && adb reverse tcp:9003 tcp:9003",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

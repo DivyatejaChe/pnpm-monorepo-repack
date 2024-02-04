@@ -232,6 +232,23 @@ export default env => {
           assetsPath,
         },
       }),
+      new Repack.plugins.ModuleFederationPlugin({
+        name: 'transactions',
+        exposes: {
+          './App': './App.tsx',
+        },
+        shared: {
+          react: {
+            ...Repack.Federated.SHARED_REACT,
+            eager: false, // to be figured out
+          },
+          'react-native': {
+            ...Repack.Federated.SHARED_REACT_NATIVE,
+            eager: false, // to be figured out
+            requiredVersion: '0.73.3',
+          },
+        },
+      }),
     ],
   };
 };

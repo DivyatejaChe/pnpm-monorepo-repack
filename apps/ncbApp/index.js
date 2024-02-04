@@ -7,14 +7,20 @@ import {ScriptManager, Script, Federated} from '@callstack/repack/client';
 import App from './App';
 import {name as appName} from './app.json';
 
-const resolveURL = Federated.createURLResolver({
-  containers: {
-    auth: 'http://localhost:9000/[name][ext]',
-    transactions: 'http://localhost:9001/[name][ext]',
-  },
-});
-
 ScriptManager.shared.addResolver(async (scriptId, caller) => {
+  /**
+   * This call is made to User-Module Permissions Backend Service
+   * Returns the list of URLs of each Module that user has access to for his given Shell version and platform
+   * For simplicty, shell version and platform are not considered here
+   */
+  const containersURL = `http://localhost:3000/host`;
+  const containersResponse = await fetch(containersURL);
+  const {userModuleAccess} = await containersResponse.json();
+
+  const resolveURL = Federated.createURLResolver({
+    containers: userModuleAccess,
+  });
+
   console.log('\n\n scriptId: ', scriptId, ' AND caller: ', caller, '\n');
   let url;
   if (caller === 'main') {

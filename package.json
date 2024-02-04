@@ -4,6 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start:ncbApp": "pnpm --filter ncbApp start",
+    "run:android:ncbApp": "pnpm --filter ncbApp run android",
+    "run:ios:ncbApp": "pnpm --filter ncbApp run ios",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:all": "concurrently -P 'pnpm -w run start:ncbApp' 'pnpm -w run start:auth' 'pnpm -w run start:transactions'",
+    "start:all": "concurrently -P 'pnpm -w run start:ncbApp' 'pnpm -w run start:auth' 'pnpm -w run start:transactions' 'pnpm -w run start:help'",
     "start:ncbApp": "pnpm --filter ncbApp start",
     "start:auth": "pnpm --filter ./packages/modules/auth start",
     "start:transactions": "pnpm --filter ./packages/modules/transactions start",
+    "start:help": "pnpm --filter ./packages/modules/helpCenter start",
     "run:android:ncbApp": "pnpm --filter ncbApp run android",
     "run:ios:ncbApp": "pnpm --filter ncbApp run ios",
     "adbreverse": "adb reverse tcp:3000 tcp:3000 && adb reverse tcp:8081 tcp:8081 && adb reverse tcp:9000 tcp:9000 && adb reverse tcp:9001 tcp:9001 && adb reverse tcp:9002 tcp:9002 && adb reverse tcp:9003 tcp:9003",

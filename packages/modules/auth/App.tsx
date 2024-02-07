@@ -1,10 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -14,11 +7,12 @@ import {
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView>
-        <View>
-          <Text>AUTH MODULE</Text>
-        </View>
-    </SafeAreaView>
+
+      <SafeAreaView>
+          <View>
+            <Text>AUTH MODULE</Text>
+          </View>
+      </SafeAreaView>
   );
 }
 

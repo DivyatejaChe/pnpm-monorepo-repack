@@ -5,6 +5,9 @@
   "scripts": {
     "android": "react-native run-android --port 9000",
     "ios": "react-native run-ios --port 9000",
+    "bundle": "pnpm bundle:ios && pnpm bundle:android",
+    "bundle:ios": "react-native webpack-bundle --platform ios --entry-file index.js --dev false",
+    "bundle:android": "react-native webpack-bundle --platform android --entry-file index.js --dev false",
     "lint": "eslint .",
     "start": "react-native webpack-start --host 127.0.0.1 --port 9000",
     "test": "jest"

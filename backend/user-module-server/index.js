@@ -3,8 +3,14 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
+/**
+ * auth: "https://cdn.jsdelivr.net/gh/DivyatejaChe/df-repack@1629c48afc875fe2afb72e251f5d24c6b9cd6c66/packages/catalog-server/data/[name][ext]",
+ *
+ * auth: "http://localhost:9000/[name][ext]",
+ */
+
 const userModuleAccess = {
-  auth: "https://cdn.jsdelivr.net/gh/DivyatejaChe/df-repack@1629c48afc875fe2afb72e251f5d24c6b9cd6c66/auth.container.bundle.js",
+  auth: "https://cdn.jsdelivr.net/gh/DivyatejaChe/df-repack@9df57aa9f56e0e4bb0f2d5af450f0b2faf50bdab/bundles/build/generated/android/[name][ext]",
   transactions: "http://localhost:9001/[name][ext]",
   help: "http://localhost:9002/[name][ext]",
 };

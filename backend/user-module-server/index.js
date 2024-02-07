@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 const userModuleAccess = {
-  auth: "http://localhost:9000/[name][ext]",
+  auth: "https://cdn.jsdelivr.net/gh/DivyatejaChe/df-repack@1629c48afc875fe2afb72e251f5d24c6b9cd6c66/auth.container.bundle.js",
   transactions: "http://localhost:9001/[name][ext]",
   help: "http://localhost:9002/[name][ext]",
 };

@@ -99,24 +99,12 @@ importers:
 
   packages/modules/auth:
     dependencies:
-      '@react-navigation/native':
-        specifier: ^6.1.9
-        version: 6.1.9(react-native@0.73.3)(react@18.2.0)
-      '@react-navigation/native-stack':
-        specifier: ^6.9.17
-        version: 6.9.17(@react-navigation/native@6.1.9)(react-native-safe-area-context@4.9.0)(react-native-screens@3.29.0)(react-native@0.73.3)(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
       react-native:
         specifier: 0.73.3
         version: 0.73.3(@babel/core@7.23.9)(@babel/preset-env@7.23.9)(react@18.2.0)
-      react-native-safe-area-context:
-        specifier: ^4.9.0
-        version: 4.9.0(react-native@0.73.3)(react@18.2.0)
-      react-native-screens:
-        specifier: ^3.29.0
-        version: 3.29.0(react-native@0.73.3)(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: ^7.20.0
@@ -245,21 +233,12 @@ importers:
 
   packages/modules/transactions:
     dependencies:
-      '@react-navigation/native':
-        specifier: ^6.1.9
-        version: 6.1.9(react-native@0.73.3)(react@18.2.0)
       react:
         specifier: 18.2.0
         version: 18.2.0
       react-native:
         specifier: 0.73.3
         version: 0.73.3(@babel/core@7.23.9)(@babel/preset-env@7.23.9)(react@18.2.0)
-      react-native-safe-area-context:
-        specifier: ^4.9.0
-        version: 4.9.0(react-native@0.73.3)(react@18.2.0)
-      react-native-screens:
-        specifier: ^3.29.0
-        version: 3.29.0(react-native@0.73.3)(react@18.2.0)
     devDependencies:
       '@babel/core':
         specifier: ^7.20.0

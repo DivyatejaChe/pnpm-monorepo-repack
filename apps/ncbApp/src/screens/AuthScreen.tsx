@@ -8,10 +8,10 @@ const Transactions = React.lazy(() => Federated.importModule('transactions', './
 const AuthScreen = () => {
   return (
     <ScrollView>
-    <React.Suspense fallback={<Text>Loading Auth...</Text>}>
+    <React.Suspense fallback={<Text>Loading Auth MFE...</Text>}>
         <Auth />
     </React.Suspense>
-    <React.Suspense fallback={<Text>Loading Auth...</Text>}>
+    <React.Suspense fallback={<Text>Loading Transactions MFE...</Text>}>
         <Transactions />
     </React.Suspense>
     </ScrollView>

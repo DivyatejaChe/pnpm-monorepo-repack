@@ -8,20 +8,22 @@ import BaseText from "../../atoms/Text/BaseText";
 import BaseList from "../../atoms/List/BaseList";
 import BaseButton from "../../atoms/Button/BaseButton";
 
-import { useSelector, useDispatch } from 'react-redux';
-import { fetchTxns, transactions  } from '../../../redux/transactionSlice';
 
 const TransactionHistoryPPI = (props): JSX.Element => {
   const { textContent = "I am from PPI to view transactions" } = props;
 
-  const txnData = useSelector(transactions);
-  const dispatch = useDispatch();
+  // this data will come from backend
+const transactionsData = [
+  {id: '1', txnAmount: '100 THB', txnDate: '24/04/2024'},
+  {id: '2', txnAmount: '75 THB', txnDate: '28/04/2024'},
+];
+
 
   return (
     <View>
       <BaseText content={textContent} />
-      <BaseList data={txnData} />
-      <BaseButton title="Fetch Txns" onPress={() => dispatch(fetchTxns())} />
+      <BaseList data={transactionsData} />
+      <BaseButton title="Fetch Txns" onPress={() => console.log("Hello")} />
     </View>
   );
 };
